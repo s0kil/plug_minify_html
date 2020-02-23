@@ -10,11 +10,25 @@ by adding `plug_minify_html` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:plug_minify_html, "~> 0.1.0"}
+    {:plug_minify_html, git: "https://github.com/s0kil/plug_minify_html"}
   ]
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/plug_minify_html](https://hexdocs.pm/plug_minify_html).
+## Usage
+
+```elixir
+# Simple
+plug PlugMinifyHtml
+
+
+# Browser Pipeline
+pipeline :browser do
+  plug :accepts, ["html"]
+  plug :fetch_session
+  plug :fetch_flash
+  plug :protect_from_forgery
+  plug :put_secure_browser_headers
+  plug PlugMinifyHtml
+end
+```
