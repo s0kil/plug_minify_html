@@ -32,3 +32,5 @@ pipeline :browser do
   plug PlugMinifyHtml
 end
 ```
+
+### Resurrection Of [minify_response](https://github.com/gravityblast/minify_response)
