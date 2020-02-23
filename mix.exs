@@ -8,9 +8,9 @@ defmodule PlugMinifyHtml.MixProject do
       elixir: "~> 1.10",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      description: description,
-      package: package,
-      deps: deps
+      description: description(),
+      package: package(),
+      deps: deps()
     ]
   end
 
@@ -26,8 +26,7 @@ defmodule PlugMinifyHtml.MixProject do
       maintainers: ["Daniel Sokil"],
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/s0kil/plug_minify_html",
-        "Docs" => "https://hexdocs.pm/plug_minify_html"
+        "GitHub" => "https://github.com/s0kil/plug_minify_html"
       }
     ]
   end
@@ -41,8 +40,7 @@ defmodule PlugMinifyHtml.MixProject do
   defp deps do
     [
       {:plug, "~> 1.9"},
-      {:floki, "~> 0.26"},
-      {:ex_doc, "~> 0.21", only: :dev, runtime: false}
+      {:floki, "~> 0.26"}
     ]
   end
 end
