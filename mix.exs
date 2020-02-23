@@ -6,6 +6,7 @@ defmodule PlugMinifyHtml.MixProject do
       app: :plug_minify_html,
       version: "0.1.0",
       elixir: "~> 1.10",
+      source_url: "https://github.com/s0kil/plug_minify_html",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -40,7 +41,8 @@ defmodule PlugMinifyHtml.MixProject do
   defp deps do
     [
       {:plug, "~> 1.9"},
-      {:floki, "~> 0.26"}
+      {:floki, "~> 0.26"},
+      {:ex_doc, "~> 0.21", only: :dev, runtime: false}
     ]
   end
 end
